@@ -1,0 +1,5 @@
+mysql-python
+sqlalchemy
+Flask
+Flask-SQLAlchemy
+simplejson

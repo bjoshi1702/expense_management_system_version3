@@ -1,0 +1,19 @@
+version: '2'
+services:
+    web:
+      build: .
+      ports:
+       - 5000:5000
+      restart: always
+      links:
+       - db
+    db:
+      hostname: mysqlserver
+      image: mysql
+      ports:
+        - 3306:3306
+      volumes:
+        - /var/lib/mysql
+      environment:
+         MYSQL_ROOT_PASSWORD: bhavika
+         MYSQL_DATABASE: mydb_assignment1
